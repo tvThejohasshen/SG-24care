@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "driver":"mysql",
+        "user":"sg24care",
+        "password":"hospital",
+        "database":"sg24care",
+        "host":"127.0.0.1"
+    }
+
+}
