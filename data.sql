@@ -1,4 +1,4 @@
--- Active: 1736243546944@@127.0.0.1@3306@sg24care
+-- Active: 1736248801276@@127.0.0.1@3306@sg24care
 -- Use the database
 USE sg24care;
 
@@ -10,11 +10,11 @@ VALUES
 ('Orthopedics', 'Bone and joint treatments');
 
 -- Insert initial data into 'products' table (Medical Services)
-INSERT INTO products (name, category_id, description, price) 
+INSERT INTO products (name, category_id, description, cost, image_url) 
 VALUES
-('ECG', 1, 'Electrocardiogram', 150.00),
-('MRI', 2, 'Magnetic Resonance Imaging', 500.00),
-('Surgery', 3, 'Orthopedic Surgery', 3000.00);
+('ECG', 1, 'Electrocardiogram', 150.00, 'http://example.com/ecg.jpg'),
+('MRI', 2, 'Magnetic Resonance Imaging', 500.00, 'http://example.com/mri.jpg'),
+('Surgery', 3, 'Orthopedic Surgery', 3000.00, 'http://example.com/surgery.jpg');
 
 -- Insert initial data into 'tags' table (Conditions/Treatment Types)
 INSERT INTO tags (name) 
@@ -23,9 +23,12 @@ VALUES
 ('Emergency'),
 ('Routine');
 
--- Insert initial data into 'product_tags' table (Many-to-Many relationship)
-INSERT INTO product_tags (product_id, tag_id) 
+INSERT INTO product_tags (product_id, tag_id)
 VALUES
 (1, 1),  -- ECG tagged as Chronic
-(2, 2),  -- MRI tagged as Emergency
+(7, 1),  -- MRI tagged as Emergency
 (3, 3);  -- Surgery tagged as Routine
+
+INSERT INTO users (username, email, password) 
+VALUES
+
