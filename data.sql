@@ -32,3 +32,8 @@ VALUES
 INSERT INTO users (username, email, password) 
 VALUES
 
+INSERT INTO cart_items (user_id, product_id, quantity)
+VALUES
+(1, 2, 3),  -- User 1 adds 3 of Product 2 to the cart
+(2, 1, 1);  -- User 2 adds 1 of Product 1 to the cart
+
