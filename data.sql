@@ -1,33 +1,37 @@
--- Active: 1736248801276@@127.0.0.1@3306@sg24care
+-- Active: 1736258632407@@127.0.0.1@3306@sg24care
 -- Use the database
 USE sg24care;
 
 -- Insert initial data into 'categories' table
 INSERT INTO categories (name, description) 
 VALUES
-('Cardiology', 'Heart and vascular system treatments'),
-('Neurology', 'Brain and nervous system treatments'),
-('Orthopedics', 'Bone and joint treatments');
+('Gaming Laptops', 'High-performance laptops designed for gaming and heavy tasks'),
+('Ultrabooks', 'Thin and lightweight laptops for portability and productivity'),
+('Business Laptops', 'Laptops tailored for corporate and office use');
+
 
 -- Insert initial data into 'products' table (Medical Services)
 INSERT INTO products (name, category_id, description, cost, image_url) 
 VALUES
-('ECG', 1, 'Electrocardiogram', 150.00, 'http://example.com/ecg.jpg'),
-('MRI', 2, 'Magnetic Resonance Imaging', 500.00, 'http://example.com/mri.jpg'),
-('Surgery', 3, 'Orthopedic Surgery', 3000.00, 'http://example.com/surgery.jpg');
+('Alienware M15', 1, 'High-performance gaming laptop with powerful graphics', 2500.00, 'http://example.com/alienware_m15.jpg'),
+('Dell XPS 13', 2, 'Compact and lightweight ultrabook with stunning display', 1200.00, 'http://example.com/dell_xps13.jpg'),
+('Lenovo ThinkPad X1 Carbon', 3, 'Premium business laptop with robust security features', 1800.00, 'http://example.com/thinkpad_x1.jpg');
+
 
 -- Insert initial data into 'tags' table (Conditions/Treatment Types)
 INSERT INTO tags (name) 
 VALUES
-('Chronic'),
-('Emergency'),
-('Routine');
+('Touchscreen'),
+('High Battery Life'),
+('4K Display');
+
 
 INSERT INTO product_tags (product_id, tag_id)
 VALUES
-(1, 1),  -- ECG tagged as Chronic
-(7, 1),  -- MRI tagged as Emergency
-(3, 3);  -- Surgery tagged as Routine
+(1, 1),  -- Alienware M15 tagged as Touchscreen
+(2, 2),  -- Dell XPS 13 tagged as High Battery Life
+(3, 3);  -- Lenovo ThinkPad X1 Carbon tagged as 4K Display
+
 
 
 

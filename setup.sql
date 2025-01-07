@@ -1,4 +1,4 @@
--- Active: 1736243546944@@127.0.0.1@3306
+-- Active: 1736258632407@@127.0.0.1@3306
 -- Create the database 'sg24care' first
 CREATE DATABASE sg24care;
 
