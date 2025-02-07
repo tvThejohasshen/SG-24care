@@ -1,4 +1,4 @@
-Singapore Laptops sales 
+# Singapore Laptops sales 
 1. npm install nodemon -g
 2. yarn install
 3. please run setup.sql and schema.sql and data.sql
